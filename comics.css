@@ -1,0 +1,31 @@
+#wrapper {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5%;
+    padding: 5%;
+}
+
+.comic__box {
+    height: 70vh;
+    background-color: #ec1d24cc !important;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.comic__box::-webkit-scrollbar {
+    display: none;
+  }
+
+.comic__box > img {
+    height: 85%;
+    border-radius: 10px;
+}
+
+.details__box {
+    margin-top: 30px;
+}

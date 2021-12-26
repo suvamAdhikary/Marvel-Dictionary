@@ -28,10 +28,12 @@ const displayResult = (allData) => {
     for(let ele of allData) {
 
         let p = document.createElement('p');
+        p.setAttribute('class', 'char__names');
         p.innerText = ele.name;
         p.onclick = function() {
 
             let parent = document.querySelector("main");
+            parent.setAttribute("id", 'char__box');
             parent.innerHTML = "";
 
             parent .innerHTML = `

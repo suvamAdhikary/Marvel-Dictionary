@@ -25,7 +25,7 @@ const displayAll = async () => {
     let Main = document.getElementById('comics__main');
 
     let data = await getAll();
-
+    let Wrapper = document.getElementById('wrapper');
 
     for(let comic of data){
         let Parent = document.createElement('div');
@@ -33,12 +33,15 @@ const displayAll = async () => {
         Parent.onclick = () => {
 
             let Details = document.createElement('div');
+            Details.setAttribute('class', 'details__box');
             console.log(comic);
             Main.innerHTML = "";
 
             Details.innerHTML = `
                 <h1>${comic.title}</h1>
-                <img src="${comic.thumbnail.path}.${comic.thumbnail.extension}" />
+                <div>
+                <img src="${comic.thumbnail.path}.${comic.thumbnail.extension}" class="small__img" />
+                </div>
                 <button id="back__to--comics">BACK</button>
             `;
 
@@ -60,7 +63,7 @@ const displayAll = async () => {
 
         Parent.append(Img, name);
 
-        Main.append(Parent);
+        Wrapper.append(Parent);
     }
 
 }

@@ -1,4 +1,5 @@
 import './style.css';
+import './global.css';
 
 import { header } from './header';
 

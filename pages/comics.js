@@ -1,8 +1,8 @@
-import './global.css';
+import '../global.css';
 
 import './comics.css';
 
-import { header } from './header';
+import { header } from '../header';
 
 import { displayAll } from './allcomics';
 
